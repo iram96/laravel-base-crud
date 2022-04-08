@@ -128,7 +128,7 @@ class ComicSeeder extends Seeder
                 $myComic->title = $comic['title'];
                 $myComic->description = $comic['description'];
                 $myComic->thumb = $comic['thumb'];
-                $myComic->price = $comic['description'];
+                $myComic->price = $comic['price'];
                 $myComic->series = $comic['series'];
                 $myComic->sale_date = $comic['sale_date'];
                 $myComic->type = $comic['type'];
