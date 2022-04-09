@@ -28,8 +28,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        $comics = new Comic();
-        return view('comics.create', compact('comics'));
+        $comic = new Comic();
+        return view('comics.create', compact('comic'));
     }
 
     /**
@@ -55,7 +55,7 @@ class ComicController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route('comics.show', $comics);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
@@ -66,7 +66,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('comics.show', compact('comics'));
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -77,7 +77,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view('comics.edit', compact('comics'));
+        return view('comics.edit', compact('comic'));
     }
 
     /**
